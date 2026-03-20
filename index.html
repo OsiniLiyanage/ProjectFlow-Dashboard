@@ -1,194 +1,263 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projectflow</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body
-    class="bg-slate-300 text-slate-900"
-    style="font-family: &quot;Plus Jakarta Sans&quot;, sans-serif"
-  >
-    <!-- sidebar -->
-    <aside class="bg-purple-200 p-4">
-      <div class="bg-purple-300 p-2 mb-4">
-        <span class="font-bold">PF</span>
-        <span class="font-bold ml-2">Project Flow</span>
-      </div>
+</head>
 
-      <nav>
-        <a href="" class="block p-1">Dashboard</a>
-        <a href="" class="block p-1">Settings</a>
-      </nav>
+<body class="bg-slate-300 text-slate-900" style="font-family: &quot;Plus Jakarta Sans&quot;, sans-serif">
+    <!-- sidebar -->
+    <aside class="bg-indigo-950 fixed top-0 left-0 bottom-0 w-60 flex flex-col py-6 -40 hidden md:flex">
+        <div class="flex items-center gap-3 px-5 pb-5 mb-2 border-b border-indigo-800">
+            <div class="w-9 h-9 flex items-center justify-center">
+                <img src="images/icon.png" alt="" />
+            </div>
+
+            <span class="font-bold text-base text-white">Project Flow</span>
+        </div>
+
+        <nav class="flex flex-col gap-1 px-3 flex-1 mt-2">
+            <a href="#"
+                class="nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-semibold text-violet-400 bg-violet-400/10"
+                data-page="dashboard">
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z">
+                    </path>
+                </svg>
+                Dashboard
+            </a>
+            <a href="#"
+                class="nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-indigo-300 hover:bg-indigo-800 hover:text-white"
+                data-page="settings">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="3" />
+                    <path
+                        d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l-.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                </svg>
+                Settings
+            </a>
+        </nav>
     </aside>
 
     <!-- main display -->
-    <main class="bg-yellow-100 p-4">
-      <header class="bg-yellow-200 p-4 mb-4">
-        <button class="hamburger bg-gray-200 p-1">
-          <svg
-            class="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
-          </svg>
-        </button>
+    <main class="md:ml-60 min-h-screen bg-slate-100">
+        <header
+            class="bg-white border-b border-slate-200 px-6 py-4 flex items-center justify-between gap-4 sticky top-0 z-30">
+            <!-- LEFT SIDE: Hamburger + Title -->
+            <div class="flex items-start gap-3 relative">
+                <button class="hamburger md:hidden p-1.5 rounded-lg hover:bg-slate-100 text-slate-600">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
 
-        <!-- mobie menu -->
-        <div class="mobile-popover">
-          <a href=""></a>
-          <a href=""></a>
-        </div>
+                <!-- Mobile Popover -->
+                <div
+                    class="mobile-popover hidden absolute top-full left-0 mt-2 bg-indigo-950 border border-indigo-800 rounded-xl shadow-2xl p-2 w-48 z-50">
+                    <a href="#"
+                        class="popover-link flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm font-semibold text-violet-400 bg-violet-400/10"
+                        data-page="dashboard">
+                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7" />
+                            <rect x="14" y="3" width="7" height="7" />
+                            <rect x="14" y="14" width="7" height="7" />
+                            <rect x="3" y="14" width="7" height="7" />
+                        </svg>
+                        Dashboard
+                    </a>
+                    <a href="#"
+                        class="popover-link flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm font-medium text-indigo-300 hover:bg-indigo-800 hover:text-white mt-0.5"
+                        data-page="settings">
+                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3" />
+                            <path
+                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l-.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                        </svg>
+                        Settings
+                    </a>
+                </div>
 
-        <div class="bg-yellow-300 p-2">
-          <h1 class="font-bold text-xl">Dashboard</h1>
-          <p>Track and manage your project tasks.</p>
-          <button class="bg-black text-white p-2">+ Add Task</button>
-        </div>
-      </header>
+                <div>
+                    <h1 class="text-xl font-bold text-slate-900">Dashboard</h1>
+                    <p class="text-xs text-slate-400 mt-0.5">Track and manage your project tasks.</p>
+                </div>
+            </div>
 
-      <!-- 4 card bar -->
-      <section class="bg-blue-100 p-4 mb-4">
-        <div class="bg-white p-3 mb-2 border">
-          <p>Total Tasks</p>
-          <p class="font-bold text-2xl">0</p>
-          <p>+3 from last week</p>
-        </div>
+            <!-- RIGHT SIDE: Add Task Button (MOVED OUTSIDE) -->
+            <button id="addTaskBtn"
+                class="flex items-center gap-2 px-4 py-2 bg-indigo-950 text-white text-sm font-semibold rounded-lg hover:bg-violet-700 flex-shrink-0">
+                <img src="images/add.png" alt="Add icon" class="w-4 h-4" />
+                Add Task
+            </button>
+        </header>
 
-        <div class="bg-white p-3 mb-2 border">
-          <p>In Progress</p>
-          <p class="font-bold text-2xl">3</p>
-          <p>+3 from last week</p>
-        </div>
+        <!-- 4 card bar -->
+        <section class="p-5 lg:p-7">
+            <div class="stats-grid mb-6">
+                <div class="bg-white rounded-xl p-5 border border-slate-200">
+                    <div class="flex items-start justify-between">
+                        <p class="text-sm text-slate-500 font-medium">Total Tasks</p>
+                        <svg class="h-4 w-4 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z">
+                            </path>
+                        </svg>
+                    </div>
+                    <p id="statTotalVal" class="text-4xl font-extrabold text-slate-900 mt-2">0</p>
+                    <p class="text-xs text-slate-400 mt-2">+2 from last week</p>
+                </div>
 
-        <div class="bg-white p-3 mb-2 border">
-          <p>Completed</p>
-          <p class="font-bold text-2xl">0</p>
-          <p>+3 from last week</p>
-        </div>
+                <div class="bg-white rounded-xl p-5 border border-slate-200">
+                    <div class="flex items-start justify-between">
+                        <p class="text-sm text-slate-500 font-medium">In Progress</p>
+                        <svg class="h-4 w-4 text-warning" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <p id="statProgressVal" class="text-4xl font-extrabold text-slate-900 mt-2">0</p>
+                    <p class="text-xs text-slate-400 mt-2">3 due this week</p>
+                </div>
 
-        <div class="bg-white p-3 mb-2 border">
-          <p>Overdue</p>
-          <p class="font-bold text-2xl">0</p>
-          <p>+3 from last week</p>
-        </div>
-      </section>
+                <div class="bg-white rounded-xl p-5 border border-slate-200">
+                    <div class="flex items-start justify-between">
+                        <p class="text-sm text-slate-500 font-medium">Completed</p>
+                        <svg class="h-4 w-4 text-success" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <p id="statDoneVal" class="text-4xl font-extrabold text-slate-900 mt-2">0</p>
+                    <p class="text-xs text-violet-500 font-semibold mt-2">67% completion rate</p>
+                </div>
 
-      <!-- tasks -->
-      <section class="bg-green-100 p-4 mb-4">
-        <div class="bg-green-200 p-3 mb-2">
-          <h2>tasks</h2>
-          <div class="bg-green-300 p-2">
-            <input type="text" placeholder="Search Tasks.." />
+                <div class="bg-white rounded-xl p-5 border border-slate-200">
+                    <div class="flex items-start justify-between">
+                        <p class="text-sm text-slate-500 font-medium">Overdue</p>
+                        <svg class="h-4 w-4 text-destructive" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z">
+                            </path>
+                        </svg>
+                    </div>
+                    <p id="statOverdueVal" class="text-4xl font-extrabold text-slate-900 mt-2">0</p>
+                    <p class="text-xs text-red-400 font-semibold mt-2">Needs attention</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- tasks -->
+        <section class="bg-green-100 p-4 mb-4">
+            <div class="bg-green-200 p-3 mb-2">
+                <h2>tasks</h2>
+                <div class="bg-green-300 p-2">
+                    <input type="text" placeholder="Search Tasks.." />
+
+                    <div>
+                        <button class="border p-1 ml-2">Sort</button>
+                        <div>
+                            <button>By Date</button>
+                            <button>By Priority</button>
+                            <button>By Name</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- filter by status -->
+            <div class="bg-green-300 p-2 mb-2">
+                <button>All</button>
+                <button>To Do</button>
+                <button>In Progress</button>
+                <button>Completed</button>
+            </div>
+            <div id="taskGrid" class="bg-red-100 p-3"></div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="bg-blue-50 p-4 mb-4">
+            <h2 class="font-bold mb-2">Frequently Asked Questions</h2>
+            <div class="bg-white border p-3 mb-2">
+                <button>How do i create a new task?</button>
+                <p class="text-sm text-gray-500 mt-1">
+                    Click the Add Task button and fill in the form.
+                </p>
+            </div>
 
             <div>
-              <button class="border p-1 ml-2">Sort</button>
-              <div>
-                <button>By Date</button>
-                <button>By Priority</button>
-                <button>By Name</button>
-              </div>
+                <button>How do i create a new task?</button>
+                <p>Click the Add Task button and fill in the form.</p>
             </div>
-          </div>
-        </div>
 
-        <!-- filter by status -->
-        <div class="bg-green-300 p-2 mb-2">
-          <button>All</button>
-          <button>To Do</button>
-          <button>In Progress</button>
-          <button>Completed</button>
-        </div>
-        <div id="taskGrid" class="bg-red-100 p-3"></div>
-      </section>
+            <div>
+                <button>How do i create a new task?</button>
+                <p>Click the Add Task button and fill in the form.</p>
+            </div>
 
-      <!-- FAQ -->
-      <section class="bg-blue-50 p-4 mb-4">
-        <h2 class="font-bold mb-2">Frequently Asked Questions</h2>
-        <div class="bg-white border p-3 mb-2">
-          <button>How do i create a new task?</button>
-          <p class="text-sm text-gray-500 mt-1">Click the Add Task button and fill in the form.</p>
-        </div>
+            <div>
+                <button>How do i create a new task?</button>
+                <p>Click the Add Task button and fill in the form.</p>
+            </div>
+        </section>
 
-        <div>
-          <button>How do i create a new task?</button>
-          <p>Click the Add Task button and fill in the form.</p>
-        </div>
-
-        <div>
-          <button>How do i create a new task?</button>
-          <p>Click the Add Task button and fill in the form.</p>
-        </div>
-
-        <div>
-          <button>How do i create a new task?</button>
-          <p>Click the Add Task button and fill in the form.</p>
-        </div>
-      </section>
-
-      <footer  class="bg-yellow-200 p-4 text-sm">
-        <p>Built with HTML, Tailwind CSS & JavaScript — STEMLink SEP</p>
-        <p>Project Flow @ 2026</p>
-      </footer>
+        <footer class="bg-yellow-200 p-4 text-sm">
+            <p>Built with HTML, Tailwind CSS & JavaScript — STEMLink SEP</p>
+            <p>Project Flow @ 2026</p>
+        </footer>
     </main>
 
     <!-- Add task dialog -->
-    <div class="task-dialog bg-orange-100 p-4 border-4 border-orange-400 mt-4 ">
-      <div>
+    <div class="task-dialog bg-orange-100 p-4 border-4 border-orange-400 mt-4">
         <div>
-          <h2>Add New Task</h2>
-          <button class="close-dialog">
-            <img src="" alt="closeimg" />
-          </button>
+            <div>
+                <h2>Add New Task</h2>
+                <button class="close-dialog">
+                    <img src="" alt="closeimg" />
+                </button>
+            </div>
+
+            <div>
+                <label for="taskName">Task Name *</label>
+                <input type="text" id="taskName" placeholder="e.g. Design homepage wireframe" />
+                <span id="taskNameError">Task name is required.</span>
+
+                <label for="taskDesc">Description</label>
+                <textarea name="" id="taskDesc" placeholder="Add a short description..."></textarea>
+
+                <label for="taskPriority">Priority</label>
+                <select name="" id="taskPriority">
+                    <option value="low">Low</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="high">High</option>
+                </select>
+
+                <label for="taskStatus">Status</label>
+                <select name="" id="taskStatus">
+                    <option value="todo">TO DO</option>
+                    <option value="in-progress" selected>In Progress</option>
+                    <option value="done">Completed</option>
+                </select>
+
+                <label for="taskDate">Due Date</label>
+                <input type="date" id="taskDate" />
+            </div>
+            <div>
+                <button class="close-dialog">Cancel</button>
+                <button id="modalSubmit">Add Task</button>
+            </div>
         </div>
-
-        <div>
-          <label for="taskName">Task Name *</label>
-          <input
-            type="text"
-            id="taskName"
-            placeholder="e.g. Design homepage wireframe"
-          />
-          <span id="taskNameError">Task name is required.</span>
-
-          <label for="taskDesc">Description</label>
-          <textarea
-            name=""
-            id="taskDesc"
-            placeholder="Add a short description..."
-          ></textarea>
-
-          <label for="taskPriority">Priority</label>
-          <select name="" id="taskPriority">
-            <option value="low">Low</option>
-            <option value="medium" selected>Medium</option>
-            <option value="high">High</option>
-          </select>
-
-          <label for="taskStatus">Status</label>
-          <select name="" id="taskStatus">
-            <option value="todo">TO DO</option>
-            <option value="in-progress" selected>In Progress</option>
-            <option value="done">Completed</option>
-          </select>
-
-          <label for="taskDate">Due Date</label>
-          <input type="date" id="taskDate" />
-        </div>
-        <div>
-          <button class="close-dialog">Cancel</button>
-          <button id="modalSubmit">Add Task</button>
-        </div>
-      </div>
     </div>
-  </body>
+</body>
+
 </html>
