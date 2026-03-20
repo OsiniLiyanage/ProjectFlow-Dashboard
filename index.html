@@ -1,11 +1,147 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projectflow</title>
-</head>
-<body>
-    
-</body>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body
+    class="bg-slate-300 text-slate-900"
+    style="font-family: &quot;Plus Jakarta Sans&quot;, sans-serif"
+  >
+    <!-- sidebar -->
+    <aside>
+      <div></div>
+      <span></span>
+    </aside>
+
+    <nav>
+      <a href=""></a>
+      <a href=""></a>
+    </nav>
+
+    <!-- main display -->
+    <main>
+      <header>
+        <button class="hamburger">
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
+
+        <!-- mobie menu -->
+        <div class="mobile-popover">
+          <a href=""></a>
+          <a href=""></a>
+        </div>
+
+        <div>
+          <h1>Dashboard</h1>
+          <p>Track and manage your project tasks.</p>
+          <button>+ Add Task</button>
+        </div>
+      </header>
+
+      <!-- 4 card bar -->
+      <section>
+        <div>
+          <p>Total Tasks</p>
+          <p>0</p>
+          <p>+3 from last week</p>
+        </div>
+
+        <div>
+          <p>In Progress</p>
+          <p>3</p>
+          <p>+3 from last week</p>
+        </div>
+
+        <div>
+          <p>Completed</p>
+          <p>0</p>
+          <p>+3 from last week</p>
+        </div>
+
+        <div>
+          <p>Overdue</p>
+          <p>0</p>
+          <p>+3 from last week</p>
+        </div>
+      </section>
+
+      <!-- tasks -->
+      <section>
+        <div>
+          <h2>tasks</h2>
+          <div>
+            <input type="text" placeholder="Search Tasks.." />
+
+            <div>
+              <button>Sort</button>
+              <div>
+                <button>By Date</button>
+                <button>By Priority</button>
+                <button>By Name</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!-- filter by status -->
+        <div>
+            <button>All</button>
+            <button>To Do</button>
+            <button>In Progress</button>
+            <button>Completed</button>
+
+        </div>
+        <div id="taskGrid"></div>
+      </section>
+
+      <!-- FAQ -->
+       <section>
+        <h2>Frequently Asked Questions</h2>
+        <div>
+            <button>How do i create a new task?</button>
+            <p>Click the Add Task button and fill in the form.</p>
+
+        </div>
+
+        <div>
+            <button>How do i create a new task?</button>
+            <p>Click the Add Task button and fill in the form.</p>
+            
+        </div>
+
+        <div>
+            <button>How do i create a new task?</button>
+            <p>Click the Add Task button and fill in the form.</p>
+            
+        </div>
+
+        <div>
+            <button>How do i create a new task?</button>
+            <p>Click the Add Task button and fill in the form.</p>
+            
+        </div>
+       </section>
+
+       <footer>
+        <p>Built with HTML, Tailwind CSS & JavaScript — STEMLink SEP</p>
+        <p>Project Flow @ 2026</p>
+       </footer>
+    </main>
+  </body>
 </html>
