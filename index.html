@@ -12,20 +12,22 @@
     style="font-family: &quot;Plus Jakarta Sans&quot;, sans-serif"
   >
     <!-- sidebar -->
-    <aside>
-      <div></div>
-      <span></span>
+    <aside class="bg-purple-200 p-4">
+      <div class="bg-purple-300 p-2 mb-4">
+        <span class="font-bold">PF</span>
+        <span class="font-bold ml-2">Project Flow</span>
+      </div>
+
+      <nav>
+        <a href="" class="block p-1">Dashboard</a>
+        <a href="" class="block p-1">Settings</a>
+      </nav>
     </aside>
 
-    <nav>
-      <a href=""></a>
-      <a href=""></a>
-    </nav>
-
     <!-- main display -->
-    <main>
-      <header>
-        <button class="hamburger">
+    <main class="bg-yellow-100 p-4">
+      <header class="bg-yellow-200 p-4 mb-4">
+        <button class="hamburger bg-gray-200 p-1">
           <svg
             class="h-6 w-6"
             fill="none"
@@ -47,49 +49,49 @@
           <a href=""></a>
         </div>
 
-        <div>
-          <h1>Dashboard</h1>
+        <div class="bg-yellow-300 p-2">
+          <h1 class="font-bold text-xl">Dashboard</h1>
           <p>Track and manage your project tasks.</p>
-          <button>+ Add Task</button>
+          <button class="bg-black text-white p-2">+ Add Task</button>
         </div>
       </header>
 
       <!-- 4 card bar -->
-      <section>
-        <div>
+      <section class="bg-blue-100 p-4 mb-4">
+        <div class="bg-white p-3 mb-2 border">
           <p>Total Tasks</p>
-          <p>0</p>
+          <p class="font-bold text-2xl">0</p>
           <p>+3 from last week</p>
         </div>
 
-        <div>
+        <div class="bg-white p-3 mb-2 border">
           <p>In Progress</p>
-          <p>3</p>
+          <p class="font-bold text-2xl">3</p>
           <p>+3 from last week</p>
         </div>
 
-        <div>
+        <div class="bg-white p-3 mb-2 border">
           <p>Completed</p>
-          <p>0</p>
+          <p class="font-bold text-2xl">0</p>
           <p>+3 from last week</p>
         </div>
 
-        <div>
+        <div class="bg-white p-3 mb-2 border">
           <p>Overdue</p>
-          <p>0</p>
+          <p class="font-bold text-2xl">0</p>
           <p>+3 from last week</p>
         </div>
       </section>
 
       <!-- tasks -->
-      <section>
-        <div>
+      <section class="bg-green-100 p-4 mb-4">
+        <div class="bg-green-200 p-3 mb-2">
           <h2>tasks</h2>
-          <div>
+          <div class="bg-green-300 p-2">
             <input type="text" placeholder="Search Tasks.." />
 
             <div>
-              <button>Sort</button>
+              <button class="border p-1 ml-2">Sort</button>
               <div>
                 <button>By Date</button>
                 <button>By Priority</button>
@@ -99,49 +101,94 @@
           </div>
         </div>
 
-<!-- filter by status -->
-        <div>
-            <button>All</button>
-            <button>To Do</button>
-            <button>In Progress</button>
-            <button>Completed</button>
-
+        <!-- filter by status -->
+        <div class="bg-green-300 p-2 mb-2">
+          <button>All</button>
+          <button>To Do</button>
+          <button>In Progress</button>
+          <button>Completed</button>
         </div>
-        <div id="taskGrid"></div>
+        <div id="taskGrid" class="bg-red-100 p-3"></div>
       </section>
 
       <!-- FAQ -->
-       <section>
-        <h2>Frequently Asked Questions</h2>
-        <div>
-            <button>How do i create a new task?</button>
-            <p>Click the Add Task button and fill in the form.</p>
-
+      <section class="bg-blue-50 p-4 mb-4">
+        <h2 class="font-bold mb-2">Frequently Asked Questions</h2>
+        <div class="bg-white border p-3 mb-2">
+          <button>How do i create a new task?</button>
+          <p class="text-sm text-gray-500 mt-1">Click the Add Task button and fill in the form.</p>
         </div>
 
         <div>
-            <button>How do i create a new task?</button>
-            <p>Click the Add Task button and fill in the form.</p>
-            
+          <button>How do i create a new task?</button>
+          <p>Click the Add Task button and fill in the form.</p>
         </div>
 
         <div>
-            <button>How do i create a new task?</button>
-            <p>Click the Add Task button and fill in the form.</p>
-            
+          <button>How do i create a new task?</button>
+          <p>Click the Add Task button and fill in the form.</p>
         </div>
 
         <div>
-            <button>How do i create a new task?</button>
-            <p>Click the Add Task button and fill in the form.</p>
-            
+          <button>How do i create a new task?</button>
+          <p>Click the Add Task button and fill in the form.</p>
         </div>
-       </section>
+      </section>
 
-       <footer>
+      <footer  class="bg-yellow-200 p-4 text-sm">
         <p>Built with HTML, Tailwind CSS & JavaScript — STEMLink SEP</p>
         <p>Project Flow @ 2026</p>
-       </footer>
+      </footer>
     </main>
+
+    <!-- Add task dialog -->
+    <div class="task-dialog bg-orange-100 p-4 border-4 border-orange-400 mt-4 ">
+      <div>
+        <div>
+          <h2>Add New Task</h2>
+          <button class="close-dialog">
+            <img src="" alt="closeimg" />
+          </button>
+        </div>
+
+        <div>
+          <label for="taskName">Task Name *</label>
+          <input
+            type="text"
+            id="taskName"
+            placeholder="e.g. Design homepage wireframe"
+          />
+          <span id="taskNameError">Task name is required.</span>
+
+          <label for="taskDesc">Description</label>
+          <textarea
+            name=""
+            id="taskDesc"
+            placeholder="Add a short description..."
+          ></textarea>
+
+          <label for="taskPriority">Priority</label>
+          <select name="" id="taskPriority">
+            <option value="low">Low</option>
+            <option value="medium" selected>Medium</option>
+            <option value="high">High</option>
+          </select>
+
+          <label for="taskStatus">Status</label>
+          <select name="" id="taskStatus">
+            <option value="todo">TO DO</option>
+            <option value="in-progress" selected>In Progress</option>
+            <option value="done">Completed</option>
+          </select>
+
+          <label for="taskDate">Due Date</label>
+          <input type="date" id="taskDate" />
+        </div>
+        <div>
+          <button class="close-dialog">Cancel</button>
+          <button id="modalSubmit">Add Task</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
