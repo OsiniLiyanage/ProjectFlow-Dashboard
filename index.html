@@ -7,22 +7,25 @@
     <title>Projectflow</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-slate-300 text-slate-900" style="font-family: &quot;Plus Jakarta Sans&quot;, sans-serif">
+<body class="bg-purple-950 text-slate-900" style="font-family: 'Outfit', sans-serif">
     <!-- sidebar -->
-    <aside class="bg-indigo-950 fixed top-0 left-0 bottom-0 w-60 flex flex-col py-6 -40 hidden md:flex">
-        <div class="flex items-center gap-3 px-5 pb-5 mb-2 border-b border-indigo-800">
+    <aside class="bg-purple-950  fixed top-0 left-0 bottom-0 w-60 flex flex-col py-6 z-40 hidden lg:flex">
+        <div class="flex items-center gap-3 px-5 pb-5 mb-2 border-b border-purple-500">
             <div class="w-9 h-9 flex items-center justify-center">
                 <img src="images/icon.png" alt="" />
             </div>
 
-            <span class="font-bold text-base text-white">Project Flow</span>
+            <span class="font-bold text-xl text-white" style="font-family: 'Special Elite', cursive">Project Flow</span>
         </div>
 
         <nav class="flex flex-col gap-1 px-3 flex-1 mt-2">
             <a href="#"
-                class="nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-semibold text-violet-400 bg-violet-400/10"
+                
+                class="nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-semibold text-pink-400 bg-pink-400/10"
                 data-page="dashboard">
                 <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -31,8 +34,8 @@
                 </svg>
                 Dashboard
             </a>
-            <a href="#"
-                class="nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-indigo-300 hover:bg-indigo-800 hover:text-white"
+            <a href="setting.html"
+                class="nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-indigo-300 hover:text-purple-300 hover:bg-purple-800"
                 data-page="settings">
                 <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <circle cx="12" cy="12" r="3" />
@@ -45,12 +48,12 @@
     </aside>
 
     <!-- main display -->
-    <main class="md:ml-60 min-h-screen bg-slate-100">
+    <main class="lg:ml-60 min-h-screen bg-purple-50">
         <header
-            class="bg-white border-b border-slate-200 px-6 py-4 flex items-center justify-between gap-4 sticky top-0 z-30">
-            <!-- LEFT SIDE: Hamburger + Title -->
+            class="bg-slate-50 border-b border-slate-200 px-6 py-4 flex items-center justify-between gap-4 sticky top-0 z-30">
+            
             <div class="flex items-start gap-3 relative">
-                <button class="hamburger md:hidden p-1.5 rounded-lg hover:bg-slate-100 text-slate-600">
+                <button class="hamburger lg:hidden p-1.5 rounded-lg hover:bg-slate-100 text-slate-600">
                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -59,9 +62,9 @@
 
                 <!-- Mobile Popover -->
                 <div
-                    class="mobile-popover hidden absolute top-full left-0 mt-2 bg-indigo-950 border border-indigo-800 rounded-xl shadow-2xl p-2 w-48 z-50">
+                    class="mobile-popover hidden absolute top-full left-0 mt-2 bg-purple-950 border-purple-500 rounded-xl shadow-2xl p-2 w-48 z-50">
                     <a href="#"
-                        class="popover-link flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm font-semibold text-violet-400 bg-violet-400/10"
+                        class="popover-link flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm font-semibold text-pink-400 bg-pink-400/10"
                         data-page="dashboard">
                         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <rect x="3" y="3" width="7" height="7" />
@@ -71,8 +74,8 @@
                         </svg>
                         Dashboard
                     </a>
-                    <a href="#"
-                        class="popover-link flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm font-medium text-indigo-300 hover:bg-indigo-800 hover:text-white mt-0.5"
+                    <a href="setting.html"
+                        class="popover-link flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm font-medium text-purple-300 hover:bg-purple-800 hover:text-white mt-0.5"
                         data-page="settings">
                         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="12" cy="12" r="3" />
@@ -84,26 +87,25 @@
                 </div>
 
                 <div>
-                    <h1 class="text-xl font-bold text-slate-900">Dashboard</h1>
+                    <h1 style="font-family: 'Special Elite', cursive" class="text-xl font-bold text-slate-900">Dashboard</h1>
                     <p class="text-xs text-slate-400 mt-0.5">Track and manage your project tasks.</p>
                 </div>
             </div>
 
-            <!-- RIGHT SIDE: Add Task Button (MOVED OUTSIDE) -->
             <button id="addTaskBtn"
-                class="flex items-center gap-2 px-4 py-2 bg-indigo-950 text-white text-sm font-semibold rounded-lg hover:bg-violet-700 flex-shrink-0">
+                class="flex items-center gap-2 px-4 py-2 bg-purple-950 hover:bg-pink-900 text-white text-sm font-semibold rounded-lg  flex-shrink-0">
                 <img src="images/add.png" alt="Add icon" class="w-4 h-4" />
                 Add Task
             </button>
         </header>
 
-        <!-- 4 card bar -->
-        <section class="p-5 lg:p-7">
+        <!-- 4 card stats bar -->
+        <section class="px-3 lg:px-5 pt-3 lg:pt-5 pb-0">
             <div class="stats-grid mb-6">
-                <div class="bg-white rounded-xl p-5 border border-slate-200">
+                <div class="bg-blue-100 rounded-xl p-5 border border-slate-200 border-t-4 border-t-blue-200">
                     <div class="flex items-start justify-between">
                         <p class="text-sm text-slate-500 font-medium">Total Tasks</p>
-                        <svg class="h-4 w-4 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        <svg class="h-5 w-5 text-slate-500" fill="none" viewBox="0 0 24 24" stroke-width="2"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z">
@@ -111,39 +113,39 @@
                         </svg>
                     </div>
                     <p id="statTotalVal" class="text-4xl font-extrabold text-slate-900 mt-2">0</p>
-                    <p class="text-xs text-slate-400 mt-2">+2 from last week</p>
+                    <p class="text-xs text-slate-500 mt-2">+2 from last week</p>
                 </div>
 
-                <div class="bg-white rounded-xl p-5 border border-slate-200">
+                <div class="bg-amber-100 rounded-xl p-5 border border-slate-200 border-t-4 border-t-amber-200">
                     <div class="flex items-start justify-between">
                         <p class="text-sm text-slate-500 font-medium">In Progress</p>
-                        <svg class="h-4 w-4 text-warning" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        <svg class="h-5 w-5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke-width="2"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                     </div>
                     <p id="statProgressVal" class="text-4xl font-extrabold text-slate-900 mt-2">0</p>
-                    <p class="text-xs text-slate-400 mt-2">3 due this week</p>
+                    <p class="text-xs text-amber-600 mt-2">3 due this week</p>
                 </div>
 
-                <div class="bg-white rounded-xl p-5 border border-slate-200">
+                <div class="bg-pink-100 rounded-xl p-5 border border-slate-200 border-t-4 border-t-pink-200">
                     <div class="flex items-start justify-between">
                         <p class="text-sm text-slate-500 font-medium">Completed</p>
-                        <svg class="h-4 w-4 text-success" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        <svg class="h-5 w-5 text-pink-600" fill="none" viewBox="0 0 24 24" stroke-width="2"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                     </div>
                     <p id="statDoneVal" class="text-4xl font-extrabold text-slate-900 mt-2">0</p>
-                    <p class="text-xs text-violet-500 font-semibold mt-2">67% completion rate</p>
+                    <p class="text-xs text-pink-600 font-semibold mt-2">67% completion rate</p>
                 </div>
 
-                <div class="bg-white rounded-xl p-5 border border-slate-200">
+                <div class="bg-red-100 rounded-xl p-5 border border-slate-200 border-t-4 border-t-red-200">
                     <div class="flex items-start justify-between">
                         <p class="text-sm text-slate-500 font-medium">Overdue</p>
-                        <svg class="h-4 w-4 text-destructive" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        <svg class="h-5 w-5 text-red-400" fill="none" viewBox="0 0 24 24" stroke-width="2"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z">
@@ -155,109 +157,241 @@
                 </div>
 
             </div>
+
         </section>
 
         <!-- tasks -->
-        <section class="bg-green-100 p-4 mb-4">
-            <div class="bg-green-200 p-3 mb-2">
-                <h2>tasks</h2>
-                <div class="bg-green-300 p-2">
-                    <input type="text" placeholder="Search Tasks.." />
+        <section>
+            <div
+                class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-5 py-5 border-b border-slate-100">
+                <h2 style="font-family: 'Special Elite', cursive" class="text-2xl  font-bold text-slate-900">Tasks</h2>
 
-                    <div>
-                        <button class="border p-1 ml-2">Sort</button>
-                        <div>
-                            <button>By Date</button>
-                            <button>By Priority</button>
-                            <button>By Name</button>
+                <div class="flex items-center gap-2 flex-wrap">
+                    <!-- search -->
+                    <div class="relative flex items-center">
+                        <svg class="absolute left-2.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground"
+                            fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                        <input id="searchInput" type="text" placeholder="Search Tasks.."
+                            class="border border-slate-200 rounded-lg pl-9 pr-3 py-2 text-sm placeholder-slate-400 outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100 bg-slate-50 w-44" />
+
+                    </div>
+
+                    <!-- sorting -->
+                    <div class="relative sort-wrapper">
+                        <button
+                            class="sort-btn flex items-center gap-1.5 px-3 py-2 border border-slate-200 rounded-lg text-sm text-slate-500 hover:bg-slate-50 bg-white">
+                            <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 7.5L7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5">
+                                </path>
+                            </svg>
+                            Sort</button>
+
+                        <div
+                            class="sort-dropdown hidden absolute right-0 top-full mt-1.5 bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden w-40 z-50">
+                            <button
+                                class="sort-option block w-full text-left px-4 py-2.5 text-sm text-violet-600 bg-violet-50 font-semibold"
+                                data-sort="date">By Date</button>
+                            <button
+                                class="sort-option block w-full text-left px-4 py-2.5 text-sm text-slate-500 hover:bg-slate-50"
+                                data-sort="priority">By Priority</button>
+                            <button
+                                class="sort-option block w-full text-left px-4 py-2.5 text-sm text-slate-500 hover:bg-slate-50"
+                                data-sort="name">By Name</button>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- filter by status -->
-            <div class="bg-green-300 p-2 mb-2">
-                <button>All</button>
-                <button>To Do</button>
-                <button>In Progress</button>
-                <button>Completed</button>
+            <div class="tab-bar flex border-b border-slate-100 px-5">
+                <button class="tab py-3 px-4 text-sm font-semibold text-violet-600 border-b-2 border-violet-600 -mb-px"
+                    data-tab="all">All</button>
+                <button
+                    class="tab py-3 px-4 text-sm font-medium text-slate-400 border-b-2 border-transparent -mb-px hover:text-slate-600"
+                    data-tab="todo">To Do</button>
+                <button
+                    class="tab py-3 px-4 text-sm font-medium text-slate-400 border-b-2 border-transparent -mb-px hover:text-slate-600"
+                    data-tab="in-progress">In Progress</button>
+                <button
+                    class="tab py-3 px-4 text-sm font-medium text-slate-400 border-b-2 border-transparent -mb-px hover:text-slate-600"
+                    data-tab="done">Completed</button>
             </div>
-            <div id="taskGrid" class="bg-red-100 p-3"></div>
+
+            <!-- TASK GRID -->
+            <div id="taskGrid" class="task-grid p-5 pb-0 gap-4"></div>
+
         </section>
 
         <!-- FAQ -->
-        <section class="bg-blue-50 p-4 mb-4">
-            <h2 class="font-bold mb-2">Frequently Asked Questions</h2>
-            <div class="bg-white border p-3 mb-2">
-                <button>How do i create a new task?</button>
-                <p class="text-sm text-gray-500 mt-1">
-                    Click the Add Task button and fill in the form.
-                </p>
-            </div>
+        <section class="mb-6 px-3 lg:px-5 pt-4 pb-3 lg:pb-5">
+            <h2 style="font-family: 'Special Elite', cursive" class="text-lg font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
+            <div class="flex flex-col gap-2">
 
-            <div>
-                <button>How do i create a new task?</button>
-                <p>Click the Add Task button and fill in the form.</p>
-            </div>
+                <div class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden">
+                    <button
+                        class="faq-btn w-full flex items-center justify-between px-5 py-4 text-sm font-semibold text-slate-800 hover:bg-slate-50 text-left">How
+                        do i create a new task?
+                        <svg class="accordion-chevron h-4 w-4 text-muted-foreground transition-transform duration-300"
+                            fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                        </svg>
+                    </button>
+                    <div
+                        class="faq-body hidden px-5 pb-4 text-sm text-slate-500 leading-relaxed border-t border-slate-100 pt-3">
+                        Click the "Add Task" button at the top of the dashboard. Fill in the task name, description,
+                        priority, and status, then click "Create Task" to add it to your board.
+                    </div>
+                </div>
 
-            <div>
-                <button>How do i create a new task?</button>
-                <p>Click the Add Task button and fill in the form.</p>
-            </div>
+                <div class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden">
+                    <button
+                        class="faq-btn w-full flex items-center justify-between px-5 py-4 text-sm font-semibold text-slate-800 hover:bg-slate-50 text-left">Can
+                        i filter tasks by status?
+                        <svg class="accordion-chevron h-4 w-4 text-muted-foreground transition-transform duration-300"
+                            fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                        </svg>
+                    </button>
+                    <div
+                        class="faq-body hidden px-5 pb-4 text-sm text-slate-500 leading-relaxed border-t border-slate-100 pt-3">
+                        Yes! Use the tab bar above the task grid. You can switch between "All", "In Progress",
+                        "Completed", and "To Do" to filter your task view instantly.
+                    </div>
+                </div>
 
-            <div>
-                <button>How do i create a new task?</button>
-                <p>Click the Add Task button and fill in the form.</p>
+                <div class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden">
+                    <button
+                        class="faq-btn w-full flex items-center justify-between px-5 py-4 text-sm font-semibold text-slate-800 hover:bg-slate-50 text-left">How
+                        do i sort my tasks?
+                        <svg class="accordion-chevron h-4 w-4 text-muted-foreground transition-transform duration-300"
+                            fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                        </svg>
+                    </button>
+                    <div
+                        class="faq-body hidden px-5 pb-4 text-sm text-slate-500 leading-relaxed border-t border-slate-100 pt-3">
+                        Click the "Sort" button next to the Tasks heading. You can sort by date, priority, or name. The
+                        sort applies to whichever tab you currently have selected.
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden">
+                    <button
+                        class="faq-btn w-full flex items-center justify-between px-5 py-4 text-sm font-semibold text-slate-800 hover:bg-slate-50 text-left">What
+                        do the priority badges mean?
+                        <svg class="accordion-chevron h-4 w-4 text-muted-foreground transition-transform duration-300"
+                            fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                        </svg>
+                    </button>
+                    <div
+                        class="faq-body hidden px-5 pb-4 text-sm text-slate-500 leading-relaxed border-t border-slate-100 pt-3">
+                        Tasks are color-coded by urgency.<strong>High</strong> (red) tasks need immediate attention,
+                        <strong>Medium</strong> (yellow) tasks should be tackled soon, and <strong>Low</strong> (green)
+                        tasks can be done when convenient.
+                    </div>
+                </div>
+
+
+
             </div>
         </section>
 
-        <footer class="bg-yellow-200 p-4 text-sm">
-            <p>Built with HTML, Tailwind CSS & JavaScript — STEMLink SEP</p>
-            <p>Project Flow @ 2026</p>
+        <footer class="border-t border-slate-200 bg-white px-6 py-5">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-400">
+                <p>Built with HTML, Tailwind CSS & JavaScript — STEMLink SEP</p>
+                <p>Project Flow &copy; 2026</p>
+            </div>
         </footer>
     </main>
 
-    <!-- Add task dialog -->
-    <div class="task-dialog bg-orange-100 p-4 border-4 border-orange-400 mt-4">
-        <div>
-            <div>
-                <h2>Add New Task</h2>
-                <button class="close-dialog">
-                    <img src="" alt="closeimg" />
+    <!-- Add task dialog modal -->
+    <div class=" modal-overlay hidden fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl w-full max-w-md shadow-2xl border border-slate-200">
+            <div class="flex items-center justify-between px-6 py-6 border-b border-slate-100">
+                <div class="felx flex-col gap-4">
+                    <h2 class="text-base font-bold text-slate-900">Create New Task</h2>
+                    <p class="text-sm text-slate-500">Fill in the details below to add a task</p>
+
+                </div>
+
+                <button
+                    class="modal-close w-8 h-8 flex items-center justify-center rounded-lg text-slate-400 hover:bg-slate-100">
+                    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
                 </button>
             </div>
 
-            <div>
-                <label for="taskName">Task Name *</label>
-                <input type="text" id="taskName" placeholder="e.g. Design homepage wireframe" />
-                <span id="taskNameError">Task name is required.</span>
+            <div class="px-6 py-3 flex flex-col gap-4">
 
-                <label for="taskDesc">Description</label>
-                <textarea name="" id="taskDesc" placeholder="Add a short description..."></textarea>
+                <div class="flex flex-col gap-1.5">
+                    <label class="text-sm font-semibold text-slate-600" for="taskName">Task Name <span
+                            class="text-red-500">*</span></label>
+                    <input id="taskName" type="text" placeholder="e.g. Finish the Android Project"
+                        class="border border-slate-200 rounded-lg px-3 py-2.5 text-sm text-slate-900 placeholder-slate-400 outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100" />
+                    <span id="taskNameError" class="hidden text-xs text-red-500">Task name is required.</span>
+                </div>
 
-                <label for="taskPriority">Priority</label>
-                <select name="" id="taskPriority">
-                    <option value="low">Low</option>
-                    <option value="medium" selected>Medium</option>
-                    <option value="high">High</option>
-                </select>
+                <div class="flex flex-col gap-1.5">
+                    <label class="text-sm font-semibold text-slate-600" for="taskDesc">Description</label>
+                    <textarea id="taskDesc" rows="3" placeholder="Add a short description..."
+                        class="border border-slate-200 rounded-lg px-3 py-2.5 text-sm text-slate-900 placeholder-slate-400 outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100 resize-none"></textarea>
+                </div>
 
-                <label for="taskStatus">Status</label>
-                <select name="" id="taskStatus">
-                    <option value="todo">TO DO</option>
-                    <option value="in-progress" selected>In Progress</option>
-                    <option value="done">Completed</option>
-                </select>
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="flex flex-col gap-1.5">
+                        <label for="taskPriority" class="text-sm font-semibold text-slate-600">Priority</label>
+                        <select id="taskPriority"
+                            class="border border-slate-200 rounded-lg px-3 py-2.5 text-sm text-slate-900 outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100 bg-white">
+                            <option value="low">Low</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="high">High</option>
+                        </select>
 
-                <label for="taskDate">Due Date</label>
-                <input type="date" id="taskDate" />
+                    </div>
+
+                    <div class="flex flex-col gap-1.5">
+                        <label class="text-sm font-semibold text-slate-600" for="taskStatus">Status</label>
+                        <select
+                            class="border border-slate-200 rounded-lg px-3 py-2.5 text-sm text-slate-900 outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100 bg-white"
+                            name="" id="taskStatus">
+                            <option value="todo">TO DO</option>
+                            <option value="in-progress" selected>In Progress</option>
+                            <option value="done">Completed</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div class="flex flex-col gap-1.5">
+
+                    <label class="text-sm font-semibold text-slate-600" for="taskDate">Due Date</label>
+                    <input
+                        class="border border-slate-200 rounded-lg px-3 py-2.5 text-sm text-slate-900 outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100"
+                        type="date" id="taskDate" />
+
+                </div>
+
             </div>
-            <div>
-                <button class="close-dialog">Cancel</button>
-                <button id="modalSubmit">Add Task</button>
+
+            <div class="flex items-center justify-end gap-2 px-6 py-4 border-t border-slate-100">
+                <button
+                    class="modal-close px-4 py-2 border border-slate-200 rounded-lg text-sm font-medium text-slate-500 hover:bg-slate-50">Cancel</button>
+                <button id="modalSubmit"
+                    class="px-4 py-2 bg-violet-600 text-white rounded-lg text-sm font-bold hover:bg-violet-700">
+                    Create Task</button>
             </div>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
