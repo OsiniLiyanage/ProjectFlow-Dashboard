@@ -21,3 +21,10 @@
 @media (min-width: 1024px) {
   .task-grid { grid-template-columns: repeat(3, 1fr); }
 }
+
+.task-card .delete-btn {
+  opacity: 0;
+}
+.task-card:hover .delete-btn {
+  opacity: 1;
+}
